@@ -1,0 +1,1 @@
+Only one can do write operation on file 
