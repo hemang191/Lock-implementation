@@ -1,1 +1,1 @@
-Only one can do write operation on file 
+Only one can do write operation on file at a time
