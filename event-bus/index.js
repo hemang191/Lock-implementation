@@ -6,11 +6,17 @@ app.use(cors());
 app.use(express.json());
 
 
-app.post('/events', (req, res) => {
+app.post('/events', async(req, res) => {
     let event = req.body
     console.log(event);
-    res.send({status : 'OK'});
     
+    axios.post('http://localhost:3009/events', event).catch((err) => {
+        console.log(3009);
+        console.log(err.message);
+    })
+
+    res.send({status : 'OK'});
+
 })
 
 
